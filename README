@@ -1,1 +1,19 @@
-Mostly done in Python.  2.6+
+Not suitable for general inclusing in Cacti because I've gone and done them
+in Python.  I may revisit at some point, redo these in PHP and attempt to submit
+them to SVN.  Until then, they live in GIT.
+
+Use as you wish, attributions appreciated.
+
+# cacti_aggr_graph.py
+Alternative to the Aggreg8 plugin.  Overloads the title_cache field for graphs to
+allow a cron job based invocation to automatically regenerate aggregate graphs.
+
+# cacti_build-templates.py
+Takes a name:value outputting data collection script, and generates a data source,
+and one or more sets of data and graph templates.  Does not yet support indexed
+queries, but it still takes a lot of the grunt work out of large graph sets.
+
+# cacti_metrics.py
+Queries Cacti as a data warehouse.  Alternative to DSStats.
+--cmdb, --product, --purpose, --environment flags included as an example for how to
+integrate with a CMDB.
