@@ -37,16 +37,16 @@ def init():
         default['db'] = config.split('database_default')[1].split('"')[1]
         default['user'] = config.split('database_username')[1].split('"')[1]
         default['password'] = config.split('database_password')[1].split('"')[1]
-    parser.add_option("-n", "--name", type="string", dest="name",
+    parser.add_option("--name", type="string", dest="name",
                             help="Database hostname to connect to. Default=%s" % (default['host']),
                             default=default['host'])
-    parser.add_option("-d", "--database", type="string", dest="db",
+    parser.add_option("--database", type="string", dest="db",
                             help="Database to connect to. Default=%s" % (default['db']),
                             default=default['db'])
-    parser.add_option("-u", "--user", type="string", dest="user",
+    parser.add_option("--user", type="string", dest="user",
                             help="User to connect to as. Default=%s" % (default['user']),
                             default=default['user'])
-    parser.add_option("-p", "--password", type="string", dest="password",
+    parser.add_option("--password", type="string", dest="password",
                             help="Password to connect with. Default=<redacted>",
                             default=default['password'])
     parser.add_option("-d", "--rradir", type="string", dest="rradir",
